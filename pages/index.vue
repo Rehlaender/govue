@@ -1,0 +1,22 @@
+<template>
+  <div class="f1 code">
+    Hello world
+    <ul>
+      <li v-for="item in items" :key="item.id">
+        {{ item.title }}
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+  import { mapState } from "vuex"
+
+  export default {
+    computed: mapState([
+      "users",
+      "ids",
+      "items"
+    ])
+  }
+</script>
